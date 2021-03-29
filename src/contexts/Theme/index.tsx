@@ -26,7 +26,7 @@ const light: IColors = {
     secondaryColor: "#197fbc",
     thirdColor: "#00a5a8",
     backgroundPrimary: "#cfd5d8",
-    backgroundSecodary: "#d9e0e5",
+    backgroundSecodary: "#eeeeee",
 };
 
 //adicionar cores para uma futura opção dark mode
@@ -35,7 +35,7 @@ const dark: IColors = {
     secondaryColor: "#197fbc",
     thirdColor: "#00a5a8",
     backgroundPrimary: "#cfd5d8",
-    backgroundSecodary: "#d9e0e5",
+    backgroundSecodary: "#eeeeee",
 }
 
 export const ThemeProvider = ({children, mode}: IThemeProvider) => {

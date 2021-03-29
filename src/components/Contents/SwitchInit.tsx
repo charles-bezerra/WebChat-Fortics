@@ -1,8 +1,23 @@
-import React from 'react';
+import useApp from '../../hooks/useApp';
+import useTheme from '../../hooks/useTheme';
+import BarChat from '../BarChat';
+import ButtonClose from '../ButtonClose';
+import Row from '../Row';
 
-const SwitchInit = () => (
+const SwitchInit = () => {
+    const { colors } = useTheme();
+    const { userDispatch, setVisibleChat } = useApp();
+
+    return (
     <>
+        <BarChat.Secondary>
+            <Row reverse>
+                <ButtonClose size="large" onClick={() => setVisibleChat(false)}/>
+            </Row>
+        </BarChat.Secondary>
     </>
-);
+    );
+}
+
 
 export default SwitchInit;

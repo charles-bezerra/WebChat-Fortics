@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 
 const ButtonCloseCore = styled.button`
-    background-color: none;
+    background-color: transparent;
     display: flex;
     height: auto;
     width: auto;
@@ -19,10 +19,34 @@ const ButtonCloseCore = styled.button`
     }
 `
 
-const ButtonClose = (props: any) => (
-    <ButtonCloseCore {...props}>
-        <MdClose color="#7C7C7C" size={14}/>
-    </ButtonCloseCore>
-)
+interface IButtonClose {
+    size: "small" | "large";
+}
+
+const LARGE = 24;
+const SMALL = 14;
+
+const ButtonClose = ({ size, ...props }: IButtonClose & any ) => {
+    const switchSize = (size?: string): number => {
+        let result = SMALL;
+
+        switch (size) {
+            case "large":
+                result = LARGE;
+                break;
+            case "small":
+                result = SMALL;
+                break;
+        }
+
+        return result;
+    }
+
+    return (
+        <ButtonCloseCore {...props}>
+            <MdClose color="#7C7C7C" size={ switchSize(size) }/>
+        </ButtonCloseCore>
+    )
+}
 
 export default ButtonClose;

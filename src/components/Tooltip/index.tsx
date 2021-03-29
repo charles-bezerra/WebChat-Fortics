@@ -1,27 +1,28 @@
 import styled from "styled-components";
 import ButtonClose from "../ButtonClose";
 import Row from "../Row";
-import Col from "../Col";
 
 const TooltipCore = styled.div`
     border-radius: 50px;
+    margin-right: 4px;
     background-color: white;
     border-bottom-right-radius: 16px;
     height: 40px;
     width: auto;
-    padding: 8px;
+    padding: 6px;
     display: ${ ({visible}: {visible: boolean}) => visible ? 'flex' : 'none' };
 
     transition: 3ms all;
 
 `;
 
-
 const Text = styled.div`
     height: 100%;
     display: flex;
+    margin-left: 4px;
     justify-content: center;
     align-content: center;
+    align-items: center;
 
     font-size: 12px;
     color: #7C7C7C;
@@ -44,15 +45,11 @@ const Tooltip = ({ visible, setVisible, text }: ITooltip) => {
     return (
         <TooltipCore visible={visible}>
             <Row>
-                <Col>
-                    <Text>
-                        {text}
-                    </Text>
-                </Col>
+                <Text>
+                    {text}
+                </Text>
 
-                <Col>
-                    <ButtonClose onClick={onClose}/>
-                </Col>
+                <ButtonClose size="small" onClick={onClose}/>
             </Row>
         </TooltipCore>
     )

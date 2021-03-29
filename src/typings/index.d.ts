@@ -1,11 +1,19 @@
+interface Findable {
+    id: string;
+}
+
+interface Action {
+    type: string;
+    payload: any;
+}
+
 interface User {
-    username: string,
     name: string,
     email: string,
     customer: boolean,
 }
 
-interface Talk {
+interface Talk extends Findable {
     message: string,
     send: User,
     receive: User,
