@@ -23,10 +23,6 @@ Execute o seguinte comando
 
 Execute o seguinte comando para usar em modo desenvolvimento
 
-### `npm run dev`
-
-Ou, execute o seguinte comando para gerar e executar o build
-
 ### `npm start`
 
 ## Executar os testes 
