@@ -1,11 +1,16 @@
 import { ChangeEvent, FormEvent, useReducer } from 'react';
 import styled from 'styled-components';
+
+//constants
 import { INITIAL_USER } from '../../constants';
+
+//reducers
 import useApp from '../../hooks/useApp';
 import useTheme from '../../hooks/useTheme';
 import userReducer from '../../reducers/userReducer';
-import BarChat from '../BarChat';
 
+//components
+import BarChat from '../BarChat';
 import Button from '../Button';
 import ButtonClose from '../ButtonClose';
 import Center from '../Center';

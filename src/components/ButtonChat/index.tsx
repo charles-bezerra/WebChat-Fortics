@@ -1,13 +1,11 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import useTheme from "../../hooks/useTheme";
 import Button from "../Button";
 import Row from "../Row";
 
 interface IButtonChat {
-    children: ReactNode;
     index: number;
-    props: any;
 }
 
 const ButtonChatCore = styled(Button)`
@@ -29,7 +27,7 @@ const CircleWhite = styled.div`
     font-size: 12px;
 `
 
-const ButtonChat = ({ children, index, ...props }: IButtonChat) => { 
+const ButtonChat = ({ index, children, ...props }: any) => { 
     const { colors } = useTheme();
 
     return (
@@ -41,5 +39,7 @@ const ButtonChat = ({ children, index, ...props }: IButtonChat) => {
         </ButtonChatCore>
     )
 }
+
+const btn = <ButtonChat index={1} onClick={() => alert('oi')}>demjnjs</ButtonChat>
 
 export default ButtonChat;

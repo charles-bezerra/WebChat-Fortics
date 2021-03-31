@@ -1,5 +1,9 @@
 import React, { ReactNode, useReducer, useState } from 'react';
+
+//constants
 import { INITIAL_TALK, INITIAL_USER } from '../../constants';
+
+//reducers
 import talkReducer from '../../reducers/talkReducer';
 import talksReducer from '../../reducers/talksReducer';
 import userReducer from '../../reducers/userReducer';

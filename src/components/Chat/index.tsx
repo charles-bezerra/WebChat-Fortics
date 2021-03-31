@@ -3,14 +3,13 @@ import { shadow } from '../../assets/styled-strings';
 
 //Contents
 import ChatInit from '../Contents/ChatInit';
+import SwitchChatInit from '../Contents/SwitchChatInit';
 
 //hooks
 import useTheme from '../../hooks/useTheme';
-import Row from '../Row';
-import ButtonClose from '../ButtonClose';
-import BarChat from '../BarChat';
 import { useCallback, useEffect, useState } from 'react';
-import SwitchInit from '../Contents/SwitchInit';
+
+//Contents
 import Talk from '../Contents/Talk';
 
 interface IChatArea extends Color{
@@ -65,7 +64,7 @@ const Chat = ({ visible, user, talks }: IChat) => {
             setContent(<ChatInit/>)
         }
         else if (talks.length === 0) {
-            setContent(<SwitchInit/>)
+            setContent(<SwitchChatInit/>)
         }
         else {
             setContent(<Talk/>)

@@ -1,10 +1,11 @@
 import useApp from '../../hooks/useApp';
 import useTheme from '../../hooks/useTheme';
+
 import BarChat from '../BarChat';
 import ButtonClose from '../ButtonClose';
 import Row from '../Row';
 
-const SwitchInit = () => {
+const SwitchChatInit = () => {
     const { colors } = useTheme();
     const { userDispatch, setVisibleChat } = useApp();
 
@@ -20,4 +21,4 @@ const SwitchInit = () => {
 }
 
 
-export default SwitchInit;
+export default SwitchChatInit;

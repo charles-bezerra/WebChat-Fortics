@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import useTheme from '../../hooks/useTheme';
 
 const Input = styled.input`
-    height: 40px;
+    height: 35px;
     width: 100%;
     
     box-sizing: border-box;
