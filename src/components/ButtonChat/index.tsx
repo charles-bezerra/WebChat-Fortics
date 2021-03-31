@@ -29,8 +29,8 @@ const CircleWhite = styled.div`
 
 const ButtonChat = ({ index, children, ...props }: any) => { 
     const { colors } = useTheme();
-
     return (
+
         <ButtonChatCore color={colors.secondaryColor} {...props}>
             <Row>
                 <CircleWhite color={colors.secondaryColor}/> 
